@@ -11,9 +11,9 @@ config.profile = false;
 config.devtool = '#source-map';
 
 config.output = {
-  path: './app/assets/build',
+  path: './build',
   pathInfo: true,
-  publicPath: '/app/assets/build/',
+  publicPath: '/build/',
   filename: 'bundle.[hash].min.js'
 };
 

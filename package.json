@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "build": "cross-env NODE_ENV=production webpack -p --progress",
+    "build": "cross-env NODE_ENV=production webpack -p --progress && node ./tasks/build.js",
     "postinstall": "npm run build"
   },
   "repository": {
@@ -34,6 +34,8 @@
     "express": "4.13.4",
     "react": "0.14.6",
     "react-dom": "0.14.6",
+    "replace-in-file": "2.0.1",
+    "shelljs": "0.7.4",
     "webpack": "1.12.12"
   },
   "devDependencies": {
