@@ -26,7 +26,7 @@ module.exports = {
     path: path.join(process.cwd(), '/app/assets'),
     pathInfo: true,
     publicPath: 'http://localhost:3000/app/assets/',
-    filename: 'main.js'
+    filename: '[name].js'
   },
 
   resolve: {

@@ -14,7 +14,7 @@ config.output = {
   path: './build',
   pathInfo: true,
   publicPath: '/build/',
-  filename: 'bundle.[hash].min.js'
+  filename: '[name].[hash].min.js'
 };
 
 config.plugins = config.plugins.concat([

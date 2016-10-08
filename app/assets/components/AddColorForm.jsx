@@ -19,6 +19,11 @@ var AddColorForm = React.createClass({
       this.setState({newColor: null, text: ''});
       this.props.setColors(this.state.colors);
     }
+    var ReactDOM = require('react-dom');
+    require.ensure(['components/LazyLoaded'], function(require) {
+      var LazyLoaded = require('components/LazyLoaded');
+      ReactDOM.render(<LazyLoaded />, document.getElementById('js-extra'));
+    });
   },
   render: function() {
     return (

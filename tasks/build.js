@@ -22,7 +22,7 @@ fs.readFile('assets.json', 'utf8', function (err,data) {
   if (err) {
     return console.log(err);
   }
-  replaceOptions.with = JSON.parse(data).main.js.replace('/build/', '');
+  replaceOptions.with = JSON.parse(data).main.js;
 
   replace(replaceOptions)
     .then(changedFiles => {
