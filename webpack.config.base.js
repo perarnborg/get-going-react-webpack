@@ -10,16 +10,16 @@ var env = {
   development: NODE_ENV === 'development' || typeof NODE_ENV === 'undefined'
 };
 
-//Object.assign(env, {
-//  build: (env.production || env.staging)
-//});
+Object.assign(env, {
+  build: (env.production || env.staging)
+});
 
 module.exports = {
   target: 'web',
 
   entry: {
     vendor: ['babel-polyfill', 'react', 'react-dom'],
-    main: ['./app/assets/main.jsx']
+    app: ['./app/assets/app.jsx']
   },
 
   output: {

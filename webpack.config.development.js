@@ -4,10 +4,10 @@ var webpack = require('webpack');
 var config = require('./webpack.config.base.js');
 
 if (process.env.NODE_ENV !== 'test') {
-  config.entry.main = [
+  config.entry.app = [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/dev-server'
-  ].concat(config.entry.main);
+  ].concat(config.entry.app);
 }
 
 config.devtool = '#cheap-module-eval-source-map';
