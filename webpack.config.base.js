@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
 
 var NODE_ENV = process.env.NODE_ENV;
 
@@ -50,9 +51,10 @@ module.exports = {
 
   module: {
     loaders: [
-      {test: /\.scss$/, loader: 'style!css!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded'}
+      {test: /\.scss$/, loader: 'style!css!postcss-loader!sass?outputStyle=expanded'}
     ],
 
     noParse: /\.min\.js/
-  }
+  },
+  postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
 };
