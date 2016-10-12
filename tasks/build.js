@@ -24,7 +24,7 @@ fs.readFile('assets.json', 'utf8', function (err,data) {
   }
   replaceOptions.with = '<script src="' + JSON.parse(data).manifest.js + '"></script>';
   replaceOptions.with += '<script src="' + JSON.parse(data).vendor.js + '"></script>';
-  replaceOptions.with += '<script src="' + JSON.parse(data).app.js + '"></script>';
+  replaceOptions.with += '<script async src="' + JSON.parse(data).app.js + '"></script>';
 
   replace(replaceOptions)
     .then(changedFiles => {

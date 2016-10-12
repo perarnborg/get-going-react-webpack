@@ -13,7 +13,7 @@ config.devtool = '#source-map';
 config.output = {
   path: './build',
   pathInfo: true,
-  publicPath: '/build/',
+  publicPath: '/',
   filename: '[name].[hash].min.js'
 };
 
